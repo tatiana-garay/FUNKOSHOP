@@ -1,7 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/',(req, res)=> res.send('Esta es la vista de Admin'));
+const controller = require('../controllers/admin.controllers')
+
+
+router.get('/',controller.admin);
+
+
 router.get('/create',(req, res)=> res.send('Esta es la vista para crear nuevo item'));
 router.post('/create',(req, res)=> res.send('Esta es la ruta para agregar nuevo item '));
 router.get('/edit/:id',(req, res)=> res.send('Esta es la vista para editar un item especifico'));
