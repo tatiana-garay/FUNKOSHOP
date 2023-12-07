@@ -5,6 +5,8 @@ const controller = require('../controllers/admin.controllers')
 
 
 router.get('/',controller.admin);
+router.get('/create',controller.create);
+router.get('/edit',controller.edit);
 
 
 router.get('/create',(req, res)=> res.send('Esta es la vista para crear nuevo item'));

@@ -4,7 +4,9 @@ const router = express.Router();
 const controller = require('../controllers/auth.controllers')
 
 
+router.get('/login',controller.auth);
 router.get('/',controller.auth);
+router.get('/register',controller.register);
 
 router.get('/login',(req, res)=> res.send('Esta es la vista del login'));
 router.post('/login',(req, res)=> res.send('Esta es la ruta que valida los datos del login'));
