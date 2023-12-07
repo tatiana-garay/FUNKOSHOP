@@ -43,7 +43,7 @@
                         <td class="table-2">
                             <div class="item-gene">
                                 <form class="item-boton" action="#" method="post" enctype="application/x-www-form-urlencoded">
-                                    <input class="item-caja" type="text" id="quantity" name="quantity" placeholder="0">
+                                    <input class="item-caja" type="text" id="quantity" name="quantity" placeholder="1">
                                     <div class="boton">
                                         <button class="item-masmen" id="subtract" type="button">-</button>
                                         <button class="item-masmen" id="add" type="button">+</button>
@@ -51,7 +51,7 @@
                                 </form>
                             </div>
                         </td>
-                        <td class="table-precio">$3599,98</td>
+                        <td class="table-precio" id="PriceItem">$1799,99</td>
                         <td class="item-delete"><button class="delete" id="delete" type="button">x</button></td>
                     </tr>
                     <tr class="table-conteiner container">
@@ -63,14 +63,14 @@
                                 <div class="table-1">
                                     <h3 class="table-licence">PIDGEOTTO</h3>
                                     <p class="table-name">POKEMON</p>
-                                    <p class="table-price">Precio unitario: $ 1799,99</p>
+                                    <p class="table-price" >Precio unitario: $ 1799,99</p>
                                 </div>
                             </article>
                         </td>
                         <td class="table-2">
                             <div class="item-gene">
                                 <form class="item-boton" action="#" method="post" enctype="application/x-www-form-urlencoded">
-                                    <input class="item-caja" type="text" id="quantity" name="quantity" placeholder="0">
+                                    <input class="item-caja" type="text" id="quantity" name="quantity" placeholder="1">
                                     <div class="boton">
                                         <button class="item-masmen" id="subtract" type="button">-</button>
                                         <button class="item-masmen" id="add" type="button">+</button>
@@ -78,7 +78,7 @@
                                 </form>
                             </div>
                         </td>
-                        <td class="table-precio">$ 1799,99</td>
+                        <td class="table-precio" id="PriceItem">$1799,99</td>
                         <td class="item-delete"><button class="delete" id="delete" type="button">x</button></td>
                     </tr>
                 </table>
@@ -88,19 +88,19 @@
                 <article class="resumen-content">
                     <div class="resumen-cant">
                         <p class="resumen-cant__el">CANTIDAD DE ELEMENTOS</p>
-                        <p class="resumen-cant-num">3</p>
+                        <p class="resumen-cant-num" id="resumen-cant">1</p>
                     </div>
                     <div class="resumen-cant">
-                        <p class="resumen-cant__el">SUBTOTAL</p>
-                        <p class="resumen-cant-num">$ 5399,97</p>
+                        <p class="resumen-cant__el" >SUBTOTAL</p>
+                        <p class="resumen-cant-num" id="cart__subtot">$1799,99 </p>
                     </div>
                     <div class="resumen-cant">
                         <p class="resumen-envio">ENVIO</p>
-                        <p class="resumen-cant-num">$ 0,00</p>
+                        <p class="resumen-cant-num" id="cart__envio">100,00</p>
                     </div>
                     <div class="resumen-totales resumen-cant">
                         <h4 class="resum-total">TOTAL</h4>
-                        <p class="resumen-price">$ 5399,97</p>
+                        <p class="resumen-price" id="cart__total">$1899,99 </p>
                     </div>
                 </article>
                 <div class="resumen-boton">
@@ -116,5 +116,7 @@
 
         
         <script src="" async defer></script>
+        <script src="/JavaScrip/carrito.js"> </script>
+        
     </body>
 </html>
