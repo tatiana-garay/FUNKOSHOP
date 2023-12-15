@@ -129,6 +129,7 @@ module.exports = {
     },
     carrito : (req, res)=>{
         res.render(path.resolve(__dirname, '../views/pages/shop/carrito.ejs'));
-    }
+    },
+    
 
 }

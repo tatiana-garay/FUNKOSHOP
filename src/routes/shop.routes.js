@@ -7,15 +7,16 @@ const fs = require('fs');
 const controller = require('../controllers/shop.controllers')
 
 
-// router.get('./', async (req, res)=>{
-    // const items = fs.readFileSync(path.resolve(__dirname, '../../data/items.json'));
-    // console.log(JSON.parse(items));
-    // res.render('shop')
-// })
+router.get('./', async (req, res)=>{
+    const items = fs.readFileSync(path.resolve(__dirname, '../../data/items.json'));
+    console.log(JSON.parse(items));
+    res.render('shop')
+})
 
 router.get('/',controller.shop);
 router.get('/item/:id', controller.item);
 router.get('/carrito', controller.carrito);
+
 
 
 
