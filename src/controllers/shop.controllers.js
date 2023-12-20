@@ -1,8 +1,35 @@
 const path = require('path');
-const fs = require('fs');
+const { getAll, getOne } = require('../models/productModel');
+
+
+// empieza a traer los item de la base de datos 
+module.exports = {
+    shop : async (req, res) =>{
+        const data = await getAll();
+        
+
+         res.render(path.resolve(__dirname, '../views/pages/shop/shop.ejs'),{
+            data  
+        })
+    },
+    item : async (req, res)=>{
+        const itemId = req.params.id;
+        const [item] = await getOne(itemId);
+        console.log(item)
+
+        res.render(path.resolve(__dirname, '../views/pages/shop/item.ejs'),{
+            item
+        });
+    },
+    carrito : (req, res)=>{
+        res.render(path.resolve(__dirname, '../views/pages/shop/carrito.ejs'));
+    },
+    
+
+}
 
 //empiezan datos de las card
-const data = [
+const json = [
     {
     product_id: 1,
     licence_name: "Pokemon",
@@ -113,23 +140,3 @@ const data = [
                                     }
     ];
 
-module.exports = {
-    shop : (req, res) =>{
-
-         res.render(path.resolve(__dirname, '../views/pages/shop/shop.ejs'),{
-            data  
-        })
-    },
-    item : (req, res)=>{
-        const itemId = req.params.id;
-        const item = data.find(item => item.product_id == itemId);
-        res.render(path.resolve(__dirname, '../views/pages/shop/item.ejs'),{
-            item
-        });
-    },
-    carrito : (req, res)=>{
-        res.render(path.resolve(__dirname, '../views/pages/shop/carrito.ejs'));
-    },
-    
-
-}
