@@ -6,7 +6,10 @@ const controller = require('../controllers/admin.controllers')
 
 router.get('/',controller.admin);
 router.get('/create',controller.create);
-router.get('/edit',controller.edit);
+router.post('/create', controller.createItem);
+router.get('/edit/:id',controller.edit);
+router.put('/edit/:id', controller.edtiItem);
+router.delete('/delete/:id', controller.deleteItem);
 
 
 router.get('/create',(req, res)=> res.send('Esta es la vista para crear nuevo item'));
